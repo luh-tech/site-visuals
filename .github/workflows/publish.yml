@@ -1,0 +1,32 @@
+# npmjs.com trusted publishing (GitHub OIDC) -- matches @luhtech/site-template's
+# own publish.yml exactly (same org, same mechanism). Trusted publishing
+# requires an existing package version on npmjs first (Erik's one-time
+# manual `npm publish`) before this workflow's OIDC-based `npm publish` can
+# succeed on later tags -- confirmed against npm's own trusted-publishers
+# docs and an open npm/cli tracking issue (#8544) this session: a brand-new
+# package cannot configure OIDC trust before it has a first published
+# version, because npmjs.com's trusted-publisher config lives on an
+# existing package's own settings page.
+#
+# No `registry-url` on setup-node -- same reason as site-template's own
+# comment: that input always writes a `//<registry>/:_authToken=` line,
+# which breaks the OIDC identity-token exchange even when the token value
+# is empty. package.json's publishConfig.registry already points at npmjs.
+name: publish
+on:
+  push:
+    tags: ['site-visuals-v*']
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: npm install -g npm@latest        # trusted publishing needs npm >= 11.5.1
+      - run: npm ci
+      - run: npm test
+      - run: npm publish --provenance --access public   # no NODE_AUTH_TOKEN: OIDC

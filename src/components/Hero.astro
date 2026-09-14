@@ -1,0 +1,101 @@
+---
+// A real, responsive photographic/illustrative hero -- AVIF/WebP/JPEG at
+// 768/1280/1920 via Astro's own built-in astro:assets <Picture> (remote
+// image support), not a hand-rolled srcset. site-template's own
+// sections/Hero.astro (the generic sectionKind:"hero" renderer) is
+// text-only and deliberately untouched by this package -- this component
+// is a standalone, directly-composed alternative a page reaches for when
+// its hero section has a real heroImage, the same opt-in-replacement
+// pattern Ectropy-Business's own marketing-site already uses for
+// SplashHero (imported and used directly in index.astro, not wired into
+// Section.astro's sectionKind dispatch table).
+//
+// Consuming site's astro.config.mjs must allowlist the asset-bank CDN host
+// for astro:assets' remote-image support:
+//   image: { domains: ["ectropy-production-asset-bank.sfo3.cdn.digitaloceanspaces.com"] }
+// -- astro:assets refuses to process a remote image from a non-allowlisted
+// host at build time; this is a real per-site config step, not automatic.
+import { Picture } from "astro:assets";
+import SectionHeading from "@luhtech/site-template/components/SectionHeading.astro";
+import CtaLink from "@luhtech/site-template/components/CtaLink.astro";
+import { resolveAssetUrl, type AssetExt, type BankType } from "../lib/resolveAssetUrl.ts";
+
+export interface Cta {
+  label: string;
+  href: string;
+  intent?: string;
+}
+
+export interface Props {
+  assetId: string;
+  bankType?: BankType;
+  ext?: AssetExt;
+  alt: string;
+  eyebrow?: string;
+  heading: string;
+  subheading?: string;
+  ctas?: Cta[];
+  /** CSS object-position value, e.g. "50% 30%" -- where the subject sits when the crop tightens. */
+  focalPoint?: string;
+  overlay?: "dark" | "light" | "none";
+}
+
+const {
+  assetId,
+  bankType = "image",
+  ext = "png",
+  alt,
+  eyebrow,
+  heading,
+  subheading,
+  ctas = [],
+  focalPoint = "50% 50%",
+  overlay = "dark",
+} = Astro.props;
+
+const src = resolveAssetUrl(assetId, bankType, ext);
+
+const OVERLAY_CLASS: Record<NonNullable<Props["overlay"]>, string> = {
+  dark: "bg-ink/55",
+  light: "bg-canvas/55",
+  none: "",
+};
+const TEXT_TONE_CLASS: Record<NonNullable<Props["overlay"]>, string> = {
+  dark: "text-canvas",
+  light: "text-ink",
+  none: "text-ink",
+};
+---
+
+<section class="relative overflow-hidden" data-reveal>
+  <div class="absolute inset-0 -z-10">
+    <Picture
+      src={src}
+      widths={[768, 1280, 1920]}
+      sizes="100vw"
+      formats={["avif", "webp", "jpeg"]}
+      alt={alt}
+      loading="eager"
+      fetchpriority="high"
+      class="w-full h-full object-cover"
+      style={`object-position: ${focalPoint}`}
+    />
+    {overlay !== "none" && <div class:list={["absolute inset-0", OVERLAY_CLASS[overlay]]} aria-hidden="true" />}
+  </div>
+  <div class:list={["relative py-24 sm:py-32 px-6 max-w-4xl mx-auto", TEXT_TONE_CLASS[overlay]]}>
+    <SectionHeading
+      level="h1"
+      eyebrow={eyebrow}
+      heading={heading}
+      subheading={subheading}
+      headingClass="text-4xl sm:text-5xl leading-tight"
+      subheadingClass="text-lg"
+      class="mb-4"
+    />
+    {ctas.length > 0 && (
+      <div class="mt-6 flex gap-4 flex-wrap">
+        {ctas.map((c, i) => <CtaLink cta={c} variant={i === 0 ? "primary" : "secondary"} />)}
+      </div>
+    )}
+  </div>
+</section>

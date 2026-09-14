@@ -1,0 +1,40 @@
+{
+  "name": "@luhtech/site-visuals",
+  "version": "0.1.0",
+  "description": "Canonical visual package for LuhTech venture sites -- responsive hero images, numbered diagram figures, and article bylines, composing with @luhtech/site-template.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "LuhTech Holdings",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luh-tech/site-visuals.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./components/*": "./src/components/*",
+    "./lib/*": "./src/lib/*"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "astro": "^7.2",
+    "tailwindcss": "^4",
+    "@luhtech/site-template": ">=0.14.0"
+  },
+  "dependencies": {},
+  "luhtech": {
+    "schemaPins": {
+      "content/page.schema.json": "1.5.0"
+    }
+  }
+}

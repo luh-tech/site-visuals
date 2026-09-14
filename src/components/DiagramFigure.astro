@@ -1,0 +1,25 @@
+---
+// Numbered/captioned wrapper around site-template's own Diagram.astro.
+// Deliberately named DiagramFigure, not Figure -- site-template already has
+// a Figure.astro that renders a DIFFERENT schema entity (section.figures[],
+// a cited-stat callout with required provenance), not section.diagrams[].
+// Reusing that name here would collide two different concepts under one
+// import path. This wraps rather than forks Diagram.astro so the three
+// real diagram renderers (RingComparison/VectorSum/DataLineChart) stay
+// owned in exactly one place.
+import Diagram from "@luhtech/site-template/components/Diagram.astro";
+
+export interface Props {
+  diagram: { diagramId: string; diagramType: string; caption?: string; data: any };
+  /** 1-indexed figure number for this page/article; omit to render with no "Figure N." prefix. */
+  number?: number;
+  class?: string;
+}
+
+const { diagram, number, class: className = "my-8" } = Astro.props;
+const captioned = number
+  ? { ...diagram, caption: diagram.caption ? `Figure ${number}. ${diagram.caption}` : `Figure ${number}` }
+  : diagram;
+---
+
+<Diagram diagram={captioned} class={className} />

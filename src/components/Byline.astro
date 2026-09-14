@@ -1,0 +1,53 @@
+---
+// Author / date / reading time / series / market-cell label for an
+// article. Deliberately prop-driven, not schema-reading: article.schema.json
+// has no author/series/publishedAt fields today (checked live this
+// session -- that's real Phase 4 scope, not yet landed). This component
+// takes whatever the caller has and renders nothing for a field it lacks,
+// rather than inventing a placeholder -- so it's ready to wire to real
+// data the moment Phase 4 adds those fields, with no rewrite needed here.
+//
+// Reading time is always computed here from real bodyText, never accepted
+// as a stored prop -- matches the dispatch's own rule (Phase 4 item 2:
+// "reading time derived at render, never stored").
+import { readingTimeMinutes } from "../lib/readingTime.ts";
+
+export interface Props {
+  author?: string;
+  /** ISO 8601 date string, e.g. "2026-09-09". */
+  publishedAt?: string;
+  series?: string;
+  /** 1-indexed position within `series`. Only rendered when `series` is also present. */
+  seriesOrdinal?: number;
+  /** Human-readable label, e.g. from a market-cell id via the site's own humanizeCellId() -- resolved by the caller, not here. */
+  marketCellLabel?: string;
+  bodyText: string;
+  class?: string;
+}
+
+const { author, publishedAt, series, seriesOrdinal, marketCellLabel, bodyText, class: className = "" } = Astro.props;
+
+const minutes = readingTimeMinutes(bodyText);
+
+const formattedDate = publishedAt
+  ? new Date(publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+  : undefined;
+
+const parts: string[] = [];
+if (author) parts.push(author);
+if (formattedDate) parts.push(formattedDate);
+if (minutes > 0) parts.push(`${minutes} min read`);
+if (series) parts.push(seriesOrdinal ? `${series} · ${seriesOrdinal}` : series);
+if (marketCellLabel) parts.push(marketCellLabel);
+---
+
+{parts.length > 0 && (
+  <p class:list={["text-sm text-ink/60 flex flex-wrap gap-x-2 gap-y-1", className]}>
+    {parts.map((p, i) => (
+      <Fragment>
+        {i > 0 && <span aria-hidden="true">&middot;</span>}
+        <span>{p}</span>
+      </Fragment>
+    ))}
+  </p>
+)}

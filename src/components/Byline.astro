@@ -11,6 +11,7 @@
 // as a stored prop -- matches the dispatch's own rule (Phase 4 item 2:
 // "reading time derived at render, never stored").
 import { readingTimeMinutes } from "../lib/readingTime.ts";
+import { formatPublishedDate } from "../lib/formatPublishedDate.ts";
 
 export interface Props {
   author?: string;
@@ -29,9 +30,7 @@ const { author, publishedAt, series, seriesOrdinal, marketCellLabel, bodyText, c
 
 const minutes = readingTimeMinutes(bodyText);
 
-const formattedDate = publishedAt
-  ? new Date(publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
-  : undefined;
+const formattedDate = publishedAt ? formatPublishedDate(publishedAt) : undefined;
 
 const parts: string[] = [];
 if (author) parts.push(author);

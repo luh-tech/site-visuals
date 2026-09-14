@@ -32,7 +32,8 @@ export interface Props {
   ext?: AssetExt;
   alt: string;
   eyebrow?: string;
-  heading: string;
+  /** Optional: omit for a pure-image hero band with no text overlay (SectionHeading already renders nothing when heading is absent). */
+  heading?: string;
   subheading?: string;
   ctas?: Cta[];
   /** CSS object-position value, e.g. "50% 30%" -- where the subject sits when the crop tightens. */
@@ -71,9 +72,11 @@ const TEXT_TONE_CLASS: Record<NonNullable<Props["overlay"]>, string> = {
   <div class="absolute inset-0 -z-10">
     <Picture
       src={src}
+      inferSize
       widths={[768, 1280, 1920]}
       sizes="100vw"
       formats={["avif", "webp", "jpeg"]}
+      fallbackFormat="jpeg"
       alt={alt}
       loading="eager"
       fetchpriority="high"

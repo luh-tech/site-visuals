@@ -10,6 +10,19 @@
 // SplashHero (imported and used directly in index.astro, not wired into
 // Section.astro's sectionKind dispatch table).
 //
+// 2026-09-16: full-bleed viewport breakout (w-screen left-1/2
+// -translate-x-1/2 -mt-16), matching the exact convention SplashHero
+// (site-template) and LuhTech-Business's own bespoke crossfade hero both
+// already use -- confirmed live via screenshot that every one of the 10
+// real sites using this component (all 8 one-pagers, Ectropy's about/
+// solutions, LuhTech-Business's about) rendered it boxed inside the
+// page's own max-w-4xl content column instead, a visible mismatch
+// against the portfolio's own established full-bleed hero language.
+// h-[50vh] min-h-[380px] max-h-[640px] gives it real presence at full
+// width without competing with the primary home-page hero's own taller
+// 85vh treatment -- this is always a secondary-page band, never the
+// first thing on the site.
+//
 // Consuming site's astro.config.mjs must allowlist the asset-bank CDN host
 // for astro:assets' remote-image support:
 //   image: { domains: ["ectropy-production-asset-bank.sfo3.cdn.digitaloceanspaces.com"] }
@@ -68,7 +81,7 @@ const TEXT_TONE_CLASS: Record<NonNullable<Props["overlay"]>, string> = {
 };
 ---
 
-<section class="relative overflow-hidden" data-reveal>
+<section class="relative w-screen left-1/2 -translate-x-1/2 -mt-16 h-[50vh] min-h-[380px] max-h-[640px] overflow-hidden" data-reveal>
   <div class="absolute inset-0 -z-10">
     <Picture
       src={src}
@@ -85,7 +98,7 @@ const TEXT_TONE_CLASS: Record<NonNullable<Props["overlay"]>, string> = {
     />
     {overlay !== "none" && <div class:list={["absolute inset-0", OVERLAY_CLASS[overlay]]} aria-hidden="true" />}
   </div>
-  <div class:list={["relative py-24 sm:py-32 px-6 max-w-4xl mx-auto", TEXT_TONE_CLASS[overlay]]}>
+  <div class:list={["relative h-full flex flex-col items-start justify-end py-12 sm:py-16 px-6 max-w-4xl mx-auto", TEXT_TONE_CLASS[overlay]]}>
     <SectionHeading
       level="h1"
       eyebrow={eyebrow}

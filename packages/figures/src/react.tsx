@@ -18,13 +18,13 @@ export interface FigureProps extends RenderOptions {
 
 export function Figure({ figure, data, theme, className, ...opts }: FigureProps) {
   const svg = useMemo(() => render(figure, data, theme, opts), [figure, data, theme, opts.width, opts.number]);
-  const table = useMemo(() => dataTable(figure, data), [figure, data]);
+  const table = useMemo(() => dataTable(figure, data, theme), [figure, data, theme]);
   return (
     <figure className={className ?? "lt-figure"} style={{ margin: 0 }}>
       <div dangerouslySetInnerHTML={{ __html: svg }} />
       {table ? (
-        <details className="lt-figure-data">
-          <summary>Data</summary>
+        <details className="lt-figure-data" style={{ marginTop: 8 }}>
+          <summary style={{ width: "fit-content", cursor: "pointer", fontSize: 13, color: theme.muted }}>Data</summary>
           <div dangerouslySetInnerHTML={{ __html: table }} />
         </details>
       ) : null}

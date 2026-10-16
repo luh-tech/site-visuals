@@ -18,13 +18,13 @@ interface Props {
 }
 const { figure, theme, data, number, width, class: cls } = Astro.props;
 const svg = render(figure, data, theme, { number, width });
-const table = dataTable(figure, data);
+const table = dataTable(figure, data, theme);
 ---
 <figure class={cls ?? "lt-figure"} style="margin:0">
   <Fragment set:html={svg} />
   {table && (
-    <details class="lt-figure-data">
-      <summary>Data</summary>
+    <details class="lt-figure-data" style="margin-top:8px">
+      <summary style={`width:fit-content;cursor:pointer;font-size:13px;color:${theme.muted}`}>Data</summary>
       <Fragment set:html={table} />
     </details>
   )}

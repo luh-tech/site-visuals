@@ -73,7 +73,9 @@ test("accessible as drawn: role, title, description, and the data table the reco
   assert.ok(svg.includes(`<title id="fig-plan-against-draft-t">${f.alt}</title>`));
   assert.ok(svg.includes("<desc id=\"fig-plan-against-draft-d\">"));
   const table = dataTable(f);
-  assert.match(table, /<caption>Revenue and cost, plan against draft<\/caption>/);
+  assert.match(table, /<caption[^>]*>Revenue and cost, plan against draft<\/caption>/);
+  const themed = dataTable(f, undefined, lb);
+  assert.ok(themed.includes(`color:${lb.ink}`) && themed.includes(`1px solid ${lb.grid}`), "the table takes the host theme");
   assert.equal((table.match(/<tr>/g) ?? []).length, 3);
   assert.equal(dataTable(figures.lever), "");
 });

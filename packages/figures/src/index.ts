@@ -112,18 +112,27 @@ export function render(figure: Figure, data: unknown, theme: Theme, opts: Render
  * The data table WCAG's two-part text alternative calls for, when the record names one: an HTML table of the
  * same rows the figure draws, to sit beside it.
  */
-export function dataTable(figure: Figure, data?: unknown): string {
+export function dataTable(figure: Figure, data?: unknown, theme?: Theme): string {
   if (!figure.dataTable) return "";
+  // Styled inline from the theme, so the table reads the same on any host whether or not it has table CSS.
+  const ink = theme?.ink ?? "#141414";
+  const rule = theme?.grid ?? "#D8D8D0";
+  const font = esc(theme?.fonts.label ?? "system-ui, sans-serif");
+  const cell = `padding:4px 16px 4px 0;text-align:left;border-bottom:1px solid ${rule}`;
   const dg = figure.diagram as Diagram;
   const d = (data ?? dg.data ?? {}) as Record<string, unknown>;
   const rows: unknown[] =
     (d.rings as unknown[]) ?? (d.cells as unknown[]) ?? (d.points as unknown[]) ?? (d.readings as unknown[]) ?? (d.levers as unknown[]) ?? [];
   const cols = rows.length ? Object.keys(rows[0] as object) : [];
-  const head = cols.map((c) => `<th scope="col">${esc(c)}</th>`).join("");
+  const head = cols.map((c) => `<th scope="col" style="${cell};font-weight:600">${esc(c)}</th>`).join("");
   const body = rows
-    .map((r) => `<tr>${cols.map((c) => `<td>${esc((r as Record<string, unknown>)[c])}</td>`).join("")}</tr>`)
+    .map((r) => `<tr>${cols.map((c) => `<td style="${cell}">${esc((r as Record<string, unknown>)[c])}</td>`).join("")}</tr>`)
     .join("");
-  return `<table class="lt-figure-table"><caption>${esc(figure.dataTable.caption)}</caption><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+  return (
+    `<table class="lt-figure-table" style="border-collapse:collapse;margin:8px 0 0;font:13px/1.4 ${font};color:${ink}">` +
+    `<caption style="caption-side:top;text-align:left;font-weight:600;padding:0 0 6px">${esc(figure.dataTable.caption)}</caption>` +
+    `<thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`
+  );
 }
 
 /** A figure's data: its own when illustrative, else what a host-supplied resolver returns for its source. */

@@ -22,7 +22,12 @@ export function Figure({ figure, data, theme, className, ...opts }: FigureProps)
   return (
     <figure className={className ?? "lt-figure"} style={{ margin: 0 }}>
       <div dangerouslySetInnerHTML={{ __html: svg }} />
-      {table ? <div className="lt-figure-data" dangerouslySetInnerHTML={{ __html: table }} /> : null}
+      {table ? (
+        <details className="lt-figure-data">
+          <summary>Data</summary>
+          <div dangerouslySetInnerHTML={{ __html: table }} />
+        </details>
+      ) : null}
     </figure>
   );
 }

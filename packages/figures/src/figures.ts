@@ -84,6 +84,9 @@ export function ringComparison(d: RingComparisonData, t: Theme, width: number): 
   const top = Math.max(...rings.map((r) => r.revenue), 1);
   const r = (v: number) => maxR * Math.sqrt(Math.max(0, v) / top);
   const cy = maxR + 4;
+  // Whole-dollar values print as compact currency ($3.35M); values already in a scale ($M, units) print as
+  // numbers, the caption naming the scale.
+  const money = (v: number) => (top >= 1000 ? fmt(v, "currency") : fmt(v));
   const out: string[] = [];
   rings.forEach((ring, i) => {
     // i places the ring; whether it is the plan comes from its label
@@ -97,7 +100,7 @@ export function ringComparison(d: RingComparisonData, t: Theme, width: number): 
       `<text x="${n(cx)}" y="${n(cy - 2)}" text-anchor="middle" font-size="20" font-weight="600" ${font(t.fonts.title)} fill="${t.ink}">${fmt(margin, "percent")}</text>`,
       `<text x="${n(cx)}" y="${n(cy + 15)}" text-anchor="middle" font-size="10.5" ${font(t.fonts.label)} fill="${t.muted}">margin</text>`,
       `<text x="${n(cx)}" y="${n(cy + maxR + 22)}" text-anchor="middle" font-size="12.5" font-weight="600" ${font(t.fonts.label)} fill="${t.ink}">${esc(ring.label)}</text>`,
-      `<text x="${n(cx)}" y="${n(cy + maxR + 38)}" text-anchor="middle" font-size="11" ${font(t.fonts.label)} fill="${t.muted}">${fmt(ring.revenue, "currency")} revenue · ${fmt(ring.cost, "currency")} cost</text>`,
+      `<text x="${n(cx)}" y="${n(cy + maxR + 38)}" text-anchor="middle" font-size="11" ${font(t.fonts.label)} fill="${t.muted}">${money(ring.revenue)} revenue · ${money(ring.cost)} cost</text>`,
     );
   });
   return { svg: out.join(""), height: cy + maxR + 44 };

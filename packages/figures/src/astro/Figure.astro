@@ -22,5 +22,10 @@ const table = dataTable(figure, data);
 ---
 <figure class={cls ?? "lt-figure"} style="margin:0">
   <Fragment set:html={svg} />
-  {table && <div class="lt-figure-data"><Fragment set:html={table} /></div>}
+  {table && (
+    <details class="lt-figure-data">
+      <summary>Data</summary>
+      <Fragment set:html={table} />
+    </details>
+  )}
 </figure>

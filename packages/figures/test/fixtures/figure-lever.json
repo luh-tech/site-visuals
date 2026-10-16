@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.luh.tech/content/figure.schema.json",
+  "audience": "public",
+  "owningVenture": "luhtech",
+  "meta": {
+    "createdAt": "2026-10-16",
+    "lastUpdated": "2026-10-16",
+    "author": "figure kit fixture"
+  },
+  "figureId": "urn:luhtech:luhtech:figure:caravan-levers",
+  "title": "Demand, not build pace, now limits Caravan",
+  "alt": "Lever panel: three levers, two moved from plan",
+  "longDescription": "Build pace at 5.0 capacity units per close against a plan of 2.5; market share at plan; price at 120% of plan. Demand is the binding constraint: capacity 144 units, demand 94.",
+  "diagram": {
+    "diagramId": "levers",
+    "diagramType": "lever",
+    "register": "sandbox",
+    "source": {
+      "ref": "urn:luhtech:luhtech:venture-model:caravan",
+      "label": "Caravan model, draft"
+    },
+    "stamp": {
+      "asOf": "2026-10-16",
+      "changeCount": 2,
+      "basis": "modelled"
+    },
+    "illustrative": true,
+    "data": {
+      "levers": [
+        {
+          "id": "pace",
+          "label": "Build pace",
+          "value": 5,
+          "plan": 2.5,
+          "min": 0,
+          "max": 6,
+          "note": "capacity units added per close \u00b7 plan 2.5"
+        },
+        {
+          "id": "share",
+          "label": "Market share",
+          "value": 1,
+          "plan": 1,
+          "min": 0,
+          "max": 2,
+          "unit": "percent",
+          "note": "against plan \u00b7 plan 100%"
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "value": 1.2,
+          "plan": 1,
+          "min": 0.5,
+          "max": 1.5,
+          "unit": "percent",
+          "note": "fee against plan \u00b7 plan 100%"
+        }
+      ],
+      "constraint": {
+        "label": "Demand is the limit",
+        "detail": "Capacity 144 units, demand 94."
+      }
+    }
+  }
+}

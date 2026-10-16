@@ -1,0 +1,436 @@
+{
+  "$schema": "https://schemas.luh.tech/portfolio/brand-identity.schema.json",
+  "brandId": "luhtech-business",
+  "entityType": "holding",
+  "identity": {
+    "name": "LuhTech",
+    "oneLiner": "A construction technology venture studio.",
+    "tagline": "The venture studio for the built environment."
+  },
+  "color": {
+    "foundation": {
+      "ink": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "canvas": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      }
+    },
+    "accent": {
+      "primary": {
+        "oklch": "oklch(21% 0.040 266)",
+        "hex": "#0F172A"
+      },
+      "secondary": {
+        "oklch": "oklch(62% 0.188 260)",
+        "hex": "#3B82F6"
+      }
+    },
+    "onDark": {
+      "foreground": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "background": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "contrastRatio": 17.77
+    },
+    "onLight": {
+      "foreground": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "background": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "contrastRatio": 17.77
+    },
+    "hueStop": 212,
+    "chart": {
+      "surfaces": {
+        "light": {
+          "surface": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          },
+          "ink": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          }
+        },
+        "dark": {
+          "surface": {
+            "oklch": "oklch(22% 0.043 262)",
+            "hex": "#0F1A2E"
+          },
+          "ink": {
+            "oklch": "oklch(95% 0.012 265)",
+            "hex": "#E9EDF5"
+          }
+        }
+      },
+      "planGhost": {
+        "fill": {
+          "oklch": "oklch(80% 0.016 266)",
+          "hex": "#B9BEC9"
+        },
+        "line": {
+          "oklch": "oklch(64% 0.017 270)",
+          "hex": "#888C97"
+        }
+      },
+      "accent": {
+        "fill": {
+          "oklch": "oklch(76% 0.141 73)",
+          "hex": "#E8A33B"
+        },
+        "line": {
+          "oklch": "oklch(64% 0.136 73)",
+          "hex": "#BE7E05"
+        }
+      },
+      "changeUp": {
+        "fill": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        },
+        "line": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        }
+      },
+      "changeDown": {
+        "fill": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        },
+        "line": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        }
+      },
+      "axis": {
+        "oklch": "oklch(55% 0.026 269)",
+        "hex": "#6A7080"
+      },
+      "grid": {
+        "oklch": "oklch(88% 0.011 107)",
+        "hex": "#D8D8D0"
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Sora",
+      "weightRange": [
+        "SemiBold",
+        "Bold"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "body": {
+      "family": "Inter",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "figure": {
+      "title": "display",
+      "label": "body",
+      "stamp": "mono"
+    }
+  },
+  "logo": {
+    "requiredVariants": {
+      "primaryMark": "luhtech-logo-rod-ink",
+      "wordmark": "luhtech-logo-flat-ink",
+      "horizontalLockup": "luhtech-logo-cross-ink",
+      "monochromeBlack": "luhtech-logo-flat-ink",
+      "monochromeWhite": "luhtech-logo-flat-white",
+      "faviconReduction": "luhtech-logo-rod-ink"
+    },
+    "rules": {
+      "clearSpace": "1x mark-height on all sides",
+      "minSize": "24px digital, 0.5in print",
+      "prohibitedUses": [
+        "never re-spaced -- the H-to-T gap is +18 units, sized to seat the rod mark with 7 units of clearance",
+        "never used below 180px width in the 'cross' extruded variant -- use 'flat' below that width",
+        "'deep' extrusion is reserved for animation only, never a static placement"
+      ]
+    }
+  },
+  "iconSet": {
+    "iconSetId": "gtm-surface-line-icons-v1"
+  },
+  "voice": {
+    "register": "Direct, systems-first. A problem is named as a property of the system -- fragmented data, no shared source of truth, disconnected tools -- never as a failing of the person using it. No hedging. A number without a named source doesn't ship.",
+    "lexicon": {
+      "preferred": [
+        "venture studio",
+        "infrastructure company",
+        "portfolio",
+        "system",
+        "coordination",
+        "decision",
+        "shared source of truth"
+      ],
+      "prohibited": [
+        "fork",
+        "forks Ectropy",
+        "code carries over",
+        "7-tier",
+        "tier authority",
+        "decision archive",
+        "sibling venture",
+        "underneath every LuhTech Holdings venture",
+        "mirror image of",
+        "intended to",
+        "is planned to",
+        "DAO",
+        "governance token",
+        "blockchain",
+        "smart contract",
+        "XaaS",
+        "GaaS",
+        "CaaS",
+        "PaaS",
+        "HaaS",
+        "RaaS",
+        "AaaS",
+        "EaaS",
+        "MaaS",
+        "IaaS",
+        "frustrated",
+        "chaotic",
+        "chaos",
+        "confused",
+        "overwhelmed",
+        "incompetent",
+        "pilot agreement",
+        "first partner site",
+        "fails the moment",
+        "real crews",
+        "early access",
+        "traction",
+        "$1.6T waste",
+        "authority cascade",
+        "claim ceiling",
+        "eb-agent",
+        "Employee Console",
+        {
+          "term": "pilot",
+          "surfaces": [
+            "page",
+            "article",
+            "social"
+          ]
+        },
+        {
+          "term": "why not",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "alternatives",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "instead of",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Ectropy",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "JobsiteControl",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Qullqa",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Viiva",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Siltana",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Ohjaus",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Raizal",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Hilja",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Replique",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Pelto",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "Investor Pitch",
+          "surfaces": [
+            "page"
+          ]
+        },
+        {
+          "term": "pitch deck",
+          "surfaces": [
+            "page"
+          ]
+        }
+      ],
+      "spellings": [
+        {
+          "term": "Sepp\u00e4",
+          "variants": [
+            "Seppa"
+          ],
+          "matchCase": false
+        },
+        {
+          "term": "SNx"
+        },
+        {
+          "term": "ASx"
+        },
+        {
+          "term": "AgtSx"
+        },
+        {
+          "term": "CSx"
+        },
+        {
+          "term": "CorSx"
+        },
+        {
+          "term": "ESx"
+        },
+        {
+          "term": "EqpSx"
+        },
+        {
+          "term": "GSx"
+        },
+        {
+          "term": "GovSx"
+        },
+        {
+          "term": "HSx"
+        },
+        {
+          "term": "HumSx"
+        },
+        {
+          "term": "ISx"
+        },
+        {
+          "term": "InsSx"
+        },
+        {
+          "term": "MSx"
+        },
+        {
+          "term": "MatSx"
+        },
+        {
+          "term": "PSx"
+        },
+        {
+          "term": "PaySx"
+        },
+        {
+          "term": "RSx"
+        },
+        {
+          "term": "RobSx"
+        }
+      ],
+      "glosses": [
+        {
+          "term": "Fragments",
+          "gloss": "That Open Company format"
+        }
+      ],
+      "prohibitedPatterns": [
+        {
+          "id": "vendor-failure-frame",
+          "pattern": "\\b(Procore|Autodesk)\\b[^.!?]*\\b(fail\\w*|broken|gaps?|replac\\w*)\\b|\\b(fail\\w*|broken|gaps?|replac\\w*)\\b[^.!?]*\\b(Procore|Autodesk)\\b",
+          "message": "Procore or Autodesk named in a failure frame. Name the data gap, not the vendor."
+        },
+        {
+          "id": "pilot-claim",
+          "pattern": "\\b(our|first|live|paid|active|ongoing|current|successful)\\s+pilots?\\b|\\bpilot(ing|ed)\\b|\\bpilots?\\s+(with|at|customers?|sites?|programs?|projects?|partners?|results?)\\b",
+          "message": "Pilot asserted as a claim. No pilot exists (L4 ruling 2026-09-06).",
+          "surfaces": [
+            "deck"
+          ]
+        },
+        {
+          "id": "aas-exchange",
+          "pattern": "\\b(exchanges?|\\w*Sx)\\b[^.!?]*\\bas[- ]a[- ]service\\b|\\bas[- ]a[- ]service\\b[^.!?]*\\bexchanges?\\b",
+          "message": "'as-a-Service' applied to an exchange. Exchanges are not branded as-a-Service."
+        }
+      ]
+    }
+  },
+  "meta": {
+    "createdAt": "2026-09-02T00:00:00Z",
+    "createdBy": "claude-code-arc-gtm-surface-brand-identity",
+    "updatedAt": "2026-09-14T00:00:00Z",
+    "updatedBy": "claude-code-gtm-launch-surface-phase2",
+    "version": 5,
+    "instanceKind": "real"
+  }
+}

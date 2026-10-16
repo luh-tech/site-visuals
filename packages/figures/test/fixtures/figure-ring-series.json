@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schemas.luh.tech/content/figure.schema.json",
+  "audience": "public",
+  "owningVenture": "luhtech",
+  "meta": {
+    "createdAt": "2026-10-16",
+    "lastUpdated": "2026-10-16",
+    "author": "figure kit fixture"
+  },
+  "figureId": "urn:luhtech:luhtech:figure:margin-by-close",
+  "title": "Margin climbs past plan from close 7",
+  "alt": "Series: margin by close, plan dashed",
+  "longDescription": "Margin by close from close 1 to close 12; the plan is flat at 31%; the draft rises from 28% to 43%, passing plan at close 7.",
+  "diagram": {
+    "diagramId": "series",
+    "diagramType": "ring-series",
+    "register": "executive",
+    "source": {
+      "ref": "urn:luhtech:luhtech:close:illustrative",
+      "label": "Closes by cell, close 12"
+    },
+    "stamp": {
+      "asOf": "2026-10-16",
+      "scenario": "Draft",
+      "publishedAt": "2026-10-16",
+      "basis": "modelled"
+    },
+    "illustrative": true,
+    "data": {
+      "unit": "percent",
+      "max": 0.6,
+      "points": [
+        {
+          "label": "close 1",
+          "value": 0.28,
+          "plan": 0.31
+        },
+        {
+          "label": "close 2",
+          "value": 0.294,
+          "plan": 0.31
+        },
+        {
+          "label": "close 3",
+          "value": 0.307,
+          "plan": 0.31
+        },
+        {
+          "label": "close 4",
+          "value": 0.321,
+          "plan": 0.31
+        },
+        {
+          "label": "close 5",
+          "value": 0.334,
+          "plan": 0.31
+        },
+        {
+          "label": "close 6",
+          "value": 0.348,
+          "plan": 0.31
+        },
+        {
+          "label": "close 7",
+          "value": 0.362,
+          "plan": 0.31
+        },
+        {
+          "label": "close 8",
+          "value": 0.375,
+          "plan": 0.31
+        },
+        {
+          "label": "close 9",
+          "value": 0.389,
+          "plan": 0.31
+        },
+        {
+          "label": "close 10",
+          "value": 0.402,
+          "plan": 0.31
+        },
+        {
+          "label": "close 11",
+          "value": 0.416,
+          "plan": 0.31
+        },
+        {
+          "label": "close 12",
+          "value": 0.43,
+          "plan": 0.31
+        }
+      ]
+    }
+  }
+}

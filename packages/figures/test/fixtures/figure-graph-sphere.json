@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.luh.tech/content/figure.schema.json",
+  "audience": "holdings",
+  "owningVenture": "luhtech",
+  "meta": {
+    "createdAt": "2026-10-16",
+    "lastUpdated": "2026-10-16",
+    "author": "figure kit fixture"
+  },
+  "figureId": "urn:luhtech:luhtech:figure:sphere-placeholder",
+  "title": "What we build meets who we serve at ten market cells",
+  "alt": "Graph sphere (not drawn yet)",
+  "longDescription": "The graph sphere of the portfolio graph.",
+  "diagram": {
+    "diagramId": "sphere",
+    "diagramType": "graph-sphere",
+    "register": "analyst",
+    "source": {
+      "ref": "urn:luhtech:luhtech:repo:luhtech-business",
+      "label": "Portfolio graph, lb-portfolio"
+    },
+    "stamp": {
+      "asOf": "2026-10-16",
+      "version": "e302247c2d0c"
+    }
+  }
+}

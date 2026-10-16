@@ -1,0 +1,301 @@
+{
+  "$schema": "https://schemas.luh.tech/portfolio/brand-identity.schema.json",
+  "brandId": "ectropy",
+  "entityType": "venture",
+  "identity": {
+    "name": "Ectropy",
+    "oneLiner": "The construction intelligence platform that binds each decision to its place, its cost, and its people.",
+    "tagline": "Every decision, accounted for."
+  },
+  "color": {
+    "foundation": {
+      "ink": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "canvas": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      }
+    },
+    "accent": {
+      "primary": {
+        "oklch": "oklch(38% 0.138 266)",
+        "hex": "#1E3A8A"
+      },
+      "secondary": {
+        "oklch": "oklch(77% 0.165 70)",
+        "hex": "#F59E0B"
+      }
+    },
+    "onDark": {
+      "foreground": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "background": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "contrastRatio": 17.77
+    },
+    "onLight": {
+      "foreground": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "background": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "contrastRatio": 17.77
+    },
+    "hueStop": 212,
+    "chart": {
+      "surfaces": {
+        "light": {
+          "surface": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          },
+          "ink": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          }
+        },
+        "dark": {
+          "surface": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          },
+          "ink": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          }
+        }
+      },
+      "planGhost": {
+        "fill": {
+          "oklch": "oklch(80% 0.016 266)",
+          "hex": "#B9BEC9"
+        },
+        "line": {
+          "oklch": "oklch(64% 0.017 270)",
+          "hex": "#888C97"
+        }
+      },
+      "accent": {
+        "fill": {
+          "oklch": "oklch(77% 0.165 70)",
+          "hex": "#F59E0B"
+        },
+        "line": {
+          "oklch": "oklch(65% 0.140 70)",
+          "hex": "#C47D03"
+        }
+      },
+      "changeUp": {
+        "fill": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        },
+        "line": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        }
+      },
+      "changeDown": {
+        "fill": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        },
+        "line": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        }
+      },
+      "axis": {
+        "oklch": "oklch(55% 0.026 269)",
+        "hex": "#6A7080"
+      },
+      "grid": {
+        "oklch": "oklch(88% 0.011 107)",
+        "hex": "#D8D8D0"
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Sora",
+      "weightRange": [
+        "SemiBold",
+        "Bold"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "body": {
+      "family": "Inter",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "figure": {
+      "title": "display",
+      "label": "body",
+      "stamp": "mono"
+    }
+  },
+  "logo": {
+    "requiredVariants": {
+      "primaryMark": "ectropy-logo-matrix-mark",
+      "wordmark": "ectropy-logo-wordmark-ink",
+      "monochromeBlack": "ectropy-logo-wordmark-ink",
+      "monochromeWhite": "ectropy-logo-wordmark-white"
+    },
+    "rules": {
+      "clearSpace": "1x mark-height on all sides",
+      "minSize": "24px digital, 0.5in print",
+      "prohibitedUses": [
+        "no rendered text inside the matrix-mark glyph itself",
+        "seams tone down to a darkened tint of the fill, never pure white on flat fill ('Minecraft' grout-line look, rejected)"
+      ]
+    }
+  },
+  "iconSet": {
+    "iconSetId": "gtm-surface-line-icons-v1"
+  },
+  "voice": {
+    "register": "Direct, systems-first. A problem is named as a property of the system -- fragmented data, no shared source of truth, disconnected tools -- never as a failing of the person using it. No hedging. A number without a named source doesn't ship.",
+    "lexicon": {
+      "preferred": [
+        "construction intelligence",
+        "decision",
+        "voxel",
+        "coordination",
+        "system",
+        "shared source of truth",
+        "real-time"
+      ],
+      "prohibited": [
+        "blockchain",
+        "DAO",
+        "smart contract",
+        "XaaS",
+        "frustrated",
+        "chaotic",
+        "chaos",
+        "confused",
+        "overwhelmed",
+        "incompetent",
+        "fork",
+        "forks Ectropy",
+        "code carries over",
+        "authority cascade",
+        "7-tier",
+        "tier authority",
+        "Fragments",
+        "Seppä",
+        "Seppa",
+        "SNx",
+        "PaySx",
+        "Service Exchange",
+        "decision archive",
+        "sibling venture",
+        "underneath every LuhTech Holdings venture",
+        "Investor Pitch",
+        "pitch deck",
+        "governance token",
+        "intended to",
+        "is planned to",
+        "mirror image of",
+        {
+          "term": "LuhTech",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "JobsiteControl",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Qullqa",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Viiva",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Siltana",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Ohjaus",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Raizal",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Hilja",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Replique",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        "VOX-BOX",
+        "IfcOpenShell",
+        "nearest-voxel",
+        "primary_voxel_urn",
+        "64/151",
+        "hash chain"
+      ]
+    }
+  },
+  "meta": {
+    "createdAt": "2026-09-02T00:00:00Z",
+    "createdBy": "claude-code-arc-gtm-surface-brand-identity",
+    "updatedAt": "2026-09-15T22:00:00Z",
+    "updatedBy": "DISPATCH-CLI-CANONICAL-CONNECTION-ARC-2026-09-15 R3",
+    "version": 5,
+    "instanceKind": "real"
+  }
+}

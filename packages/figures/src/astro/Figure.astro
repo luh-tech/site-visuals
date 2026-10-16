@@ -1,0 +1,26 @@
+---
+/**
+ * Astro adapter: renders a figure record at build -- the same SVG string render() returns on every other
+ * surface -- and its data table when the record names one.
+ *
+ *   <Figure figure={record} theme={theme} number={2} />
+ */
+import { dataTable, render } from "@luhtech/figures";
+import type { Figure as FigureRecord, Theme } from "@luhtech/figures";
+
+interface Props {
+  figure: FigureRecord;
+  theme: Theme;
+  data?: unknown;
+  number?: number;
+  width?: number;
+  class?: string;
+}
+const { figure, theme, data, number, width, class: cls } = Astro.props;
+const svg = render(figure, data, theme, { number, width });
+const table = dataTable(figure, data);
+---
+<figure class={cls ?? "lt-figure"} style="margin:0">
+  <Fragment set:html={svg} />
+  {table && <div class="lt-figure-data"><Fragment set:html={table} /></div>}
+</figure>

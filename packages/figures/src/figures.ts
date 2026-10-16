@@ -15,7 +15,7 @@ export interface Ring {
   cost: number;
 }
 export interface RingComparisonData {
-  /** rings[0] is the plan, drawn in the ghost; the rest are drafts. */
+  /** A ring labelled "Plan" is drawn in the plan ghost; every other ring in the series colour. */
   rings: Ring[];
 }
 export interface SectionCell {
@@ -86,15 +86,17 @@ export function ringComparison(d: RingComparisonData, t: Theme, width: number): 
   const cy = maxR + 4;
   const out: string[] = [];
   rings.forEach((ring, i) => {
+    // i places the ring; whether it is the plan comes from its label
     const cx = cell * i + cell / 2;
-    const p = i === 0 ? t.planGhost : t.series;
+    const isPlan = /^plan$/i.test(ring.label.trim());
+    const p = isPlan ? t.planGhost : t.series;
     const margin = ring.revenue > 0 ? (ring.revenue - ring.cost) / ring.revenue : 0;
     out.push(
       `<circle cx="${n(cx)}" cy="${n(cy)}" r="${n(r(ring.revenue))}" ${markAttrs(p)}/>`,
       `<circle cx="${n(cx)}" cy="${n(cy)}" r="${n(r(ring.cost))}" fill="${t.surface}" stroke="${p.line}" stroke-width="1"/>`,
       `<text x="${n(cx)}" y="${n(cy - 2)}" text-anchor="middle" font-size="20" font-weight="600" ${font(t.fonts.title)} fill="${t.ink}">${fmt(margin, "percent")}</text>`,
       `<text x="${n(cx)}" y="${n(cy + 15)}" text-anchor="middle" font-size="10.5" ${font(t.fonts.label)} fill="${t.muted}">margin</text>`,
-      `<text x="${n(cx)}" y="${n(cy + maxR + 22)}" text-anchor="middle" font-size="12.5" font-weight="600" ${font(t.fonts.label)} fill="${t.ink}">${esc(ring.label)}${i === 0 && !/plan/i.test(ring.label) ? " (plan)" : ""}</text>`,
+      `<text x="${n(cx)}" y="${n(cy + maxR + 22)}" text-anchor="middle" font-size="12.5" font-weight="600" ${font(t.fonts.label)} fill="${t.ink}">${esc(ring.label)}</text>`,
       `<text x="${n(cx)}" y="${n(cy + maxR + 38)}" text-anchor="middle" font-size="11" ${font(t.fonts.label)} fill="${t.muted}">${fmt(ring.revenue, "currency")} revenue · ${fmt(ring.cost, "currency")} cost</text>`,
     );
   });

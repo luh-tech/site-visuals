@@ -75,10 +75,11 @@ export function marketSwatches(families: MarketFamilies, cells: MarketCell[]): R
   return out;
 }
 
+/** families and cells are needed only by figures that draw markets; without them, markets is empty. */
 export function buildTheme(
   brand: BrandIdentity,
-  families: MarketFamilies,
-  cells: MarketCell[],
+  families?: MarketFamilies,
+  cells?: MarketCell[],
   mode: "light" | "dark" = "light",
 ): Theme {
   const chart = brand.color.chart;
@@ -106,7 +107,7 @@ export function buildTheme(
     axis: chart.axis.hex,
     grid: chart.grid.hex,
     fonts: { title: face(brand, roles.title), label: face(brand, roles.label), stamp: face(brand, roles.stamp) },
-    markets: marketSwatches(families, cells),
+    markets: families && cells ? marketSwatches(families, cells) : {},
   };
 }
 

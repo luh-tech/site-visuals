@@ -125,3 +125,11 @@ test("data: an illustrative record's own, else the resolver for its source", asy
   assert.equal(calls[0][1].headers.Authorization, "Bearer t");
   assert.equal(calls[0][1].redirect, "error");
 });
+
+test("rings that are not a plan are not ghosted; a cost past revenue leaves no ring", () => {
+  const f = structuredClone(figures["ring-comparison"]);
+  f.diagram.data = { rings: [{ label: "A", revenue: 100, cost: 85 }, { label: "B", revenue: 40, cost: 22 }, { label: "C", revenue: 60, cost: 72 }] };
+  const svg = render(f, undefined, buildTheme(brands["luhtech-business"]));
+  assert.ok(!svg.includes(`fill="${lb.planGhost.fill}"`));
+  assert.match(svg, />-20%</);
+});

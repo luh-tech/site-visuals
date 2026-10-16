@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.luh.tech/content/figure.schema.json",
+  "audience": "public",
+  "owningVenture": "luhtech",
+  "meta": {
+    "createdAt": "2026-10-16",
+    "lastUpdated": "2026-10-16",
+    "author": "figure kit fixture"
+  },
+  "figureId": "urn:luhtech:luhtech:figure:plan-against-draft",
+  "title": "Revenue runs 20% ahead of plan and margin widens 11 points",
+  "alt": "Ring comparison: plan 31% margin, draft 43%",
+  "longDescription": "Two rings, area by revenue with cost as the hole. Plan: $3.35M revenue, $2.30M cost, 31% margin. Draft: $4.02M revenue, $2.30M cost, 43% margin.",
+  "diagram": {
+    "diagramId": "rings",
+    "diagramType": "ring-comparison",
+    "caption": "The draft's ring is wider at the same cost.",
+    "data": {
+      "rings": [
+        {
+          "label": "Plan",
+          "revenue": 3350000,
+          "cost": 2300000
+        },
+        {
+          "label": "Draft",
+          "revenue": 4020000,
+          "cost": 2300000
+        }
+      ]
+    },
+    "register": "site",
+    "source": {
+      "ref": "urn:luhtech:luhtech:close:illustrative",
+      "label": "Closes by cell, close 12"
+    },
+    "stamp": {
+      "asOf": "2026-10-16"
+    },
+    "illustrative": true
+  },
+  "dataTable": {
+    "caption": "Revenue and cost, plan against draft"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://schemas.luh.tech/content/figure.schema.json",
+  "audience": "public",
+  "owningVenture": "luhtech",
+  "meta": {
+    "createdAt": "2026-10-16",
+    "lastUpdated": "2026-10-16",
+    "author": "figure kit fixture"
+  },
+  "figureId": "urn:luhtech:luhtech:figure:section-by-market",
+  "title": "Data centre and office carry the margin at close 12",
+  "alt": "Section: margin by market cell at close 12",
+  "longDescription": "Ten market wedges in register order; wedge angle is the market's share of revenue, the solid band its margin, the tint its cost to serve, the dashed arc the plan.",
+  "diagram": {
+    "diagramId": "section",
+    "diagramType": "ring-section",
+    "caption": "Every market's ring at station 12.",
+    "register": "analyst",
+    "source": {
+      "ref": "urn:luhtech:luhtech:close:illustrative",
+      "label": "Closes by cell, close 12"
+    },
+    "stamp": {
+      "asOf": "2026-10-16",
+      "version": "1ad8145b"
+    },
+    "illustrative": true,
+    "data": {
+      "center": {
+        "value": "43%"
+      },
+      "legend": "Solid: margin \u00b7 tint: cost to serve \u00b7 dashed: plan",
+      "cells": [
+        {
+          "cellId": "data-centre",
+          "label": "Data centre",
+          "share": 18,
+          "value": 0.52,
+          "inner": 0.24,
+          "plan": 0.45
+        },
+        {
+          "cellId": "office-commercial",
+          "label": "Office",
+          "share": 14,
+          "value": 0.47,
+          "inner": 0.2,
+          "plan": 0.4
+        },
+        {
+          "cellId": "retail",
+          "label": "Retail",
+          "share": 6,
+          "value": 0.3,
+          "inner": 0.18,
+          "plan": 0.32
+        },
+        {
+          "cellId": "higher-education",
+          "label": "Higher ed",
+          "share": 10,
+          "value": 0.41,
+          "inner": 0.22,
+          "plan": 0.38
+        },
+        {
+          "cellId": "single-family-residential",
+          "label": "Single-family",
+          "share": 8,
+          "value": 0.33,
+          "inner": 0.2,
+          "plan": 0.3
+        },
+        {
+          "cellId": "agricultural-land",
+          "label": "Agriculture",
+          "share": 6,
+          "value": 0.28,
+          "inner": 0.16,
+          "plan": 0.3
+        },
+        {
+          "cellId": "laboratory-research",
+          "label": "Labs",
+          "share": 9,
+          "value": 0.44,
+          "inner": 0.25,
+          "plan": 0.4
+        },
+        {
+          "cellId": "healthcare-acute",
+          "label": "Healthcare",
+          "share": 12,
+          "value": 0.39,
+          "inner": 0.27,
+          "plan": 0.36
+        },
+        {
+          "cellId": "industrial-manufacturing",
+          "label": "Industrial",
+          "share": 7,
+          "value": 0.31,
+          "inner": 0.19,
+          "plan": 0.33
+        },
+        {
+          "cellId": "transportation-infrastructure",
+          "label": "Transport",
+          "share": 5,
+          "value": 0.29,
+          "inner": 0.2,
+          "plan": 0.31
+        },
+        {
+          "cellId": "utilities-energy",
+          "label": "Utilities",
+          "share": 5,
+          "value": 0.36,
+          "inner": 0.21,
+          "plan": 0.33
+        }
+      ]
+    }
+  }
+}

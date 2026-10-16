@@ -1,0 +1,280 @@
+{
+  "$schema": "https://schemas.luh.tech/portfolio/brand-identity.schema.json",
+  "brandId": "qullqa",
+  "entityType": "venture",
+  "identity": {
+    "name": "Qullqa",
+    "oneLiner": "A complete platform for designing and building homes, from feasibility to completion. Beginning with the ADU.",
+    "tagline": "Every home begins with what's possible."
+  },
+  "color": {
+    "foundation": {
+      "ink": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "canvas": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      }
+    },
+    "accent": {
+      "primary": {
+        "oklch": "oklch(70% 0.149 162)",
+        "hex": "#10B981"
+      },
+      "secondary": {
+        "oklch": "oklch(60% 0.127 163)",
+        "hex": "#059669"
+      }
+    },
+    "onDark": {
+      "foreground": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "background": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "contrastRatio": 17.77
+    },
+    "onLight": {
+      "foreground": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "background": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "contrastRatio": 17.77
+    },
+    "hueStop": 160,
+    "chart": {
+      "surfaces": {
+        "light": {
+          "surface": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          },
+          "ink": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          }
+        },
+        "dark": {
+          "surface": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          },
+          "ink": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          }
+        }
+      },
+      "planGhost": {
+        "fill": {
+          "oklch": "oklch(80% 0.016 266)",
+          "hex": "#B9BEC9"
+        },
+        "line": {
+          "oklch": "oklch(64% 0.017 270)",
+          "hex": "#888C97"
+        }
+      },
+      "accent": {
+        "fill": {
+          "oklch": "oklch(60% 0.127 163)",
+          "hex": "#059669"
+        },
+        "line": {
+          "oklch": "oklch(60% 0.127 163)",
+          "hex": "#059669"
+        }
+      },
+      "changeUp": {
+        "fill": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        },
+        "line": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        }
+      },
+      "changeDown": {
+        "fill": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        },
+        "line": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        }
+      },
+      "axis": {
+        "oklch": "oklch(55% 0.026 269)",
+        "hex": "#6A7080"
+      },
+      "grid": {
+        "oklch": "oklch(88% 0.011 107)",
+        "hex": "#D8D8D0"
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Sora",
+      "weightRange": [
+        "SemiBold",
+        "Bold"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "body": {
+      "family": "Inter",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "figure": {
+      "title": "display",
+      "label": "body",
+      "stamp": "mono"
+    }
+  },
+  "logo": {
+    "requiredVariants": {
+      "primaryMark": "qullqa-mark",
+      "faviconReduction": "qullqa-mark"
+    },
+    "rules": {
+      "clearSpace": "1x mark-height on all sides",
+      "minSize": "24px digital"
+    }
+  },
+  "iconSet": {
+    "iconSetId": "gtm-surface-line-icons-v1"
+  },
+  "meta": {
+    "createdAt": "2026-09-03T00:00:00Z",
+    "createdBy": "claude-code-qullqa-thin-site",
+    "updatedAt": "2026-09-05T00:00:00Z",
+    "updatedBy": "claude-code-asset-bank-registration",
+    "version": 2,
+    "instanceKind": "real"
+  },
+  "voice": {
+    "register": "Direct, systems-first. A problem is named as a property of the system -- feasibility answered too late, no single platform from lot to completion -- never as a failing of the homeowner. No hedging. A number without a named source doesn't ship.",
+    "lexicon": {
+      "preferred": [
+        "feasibility",
+        "ADU",
+        "platform",
+        "coordination",
+        "decision",
+        "system"
+      ],
+      "prohibited": [
+        "fork",
+        "forks Ectropy",
+        "code carries over",
+        "authority cascade",
+        "7-tier",
+        "tier authority",
+        "Fragments",
+        "Seppä",
+        "Seppa",
+        "SNx",
+        "PaySx",
+        "Service Exchange",
+        "decision archive",
+        "sibling venture",
+        "underneath every LuhTech Holdings venture",
+        "Investor Pitch",
+        "pitch deck",
+        "DAO",
+        "governance token",
+        "designed to",
+        "intended to",
+        "is planned to",
+        "mirror image of",
+        {
+          "term": "LuhTech",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Ectropy",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "JobsiteControl",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Viiva",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Siltana",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Ohjaus",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Raizal",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Hilja",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        },
+        {
+          "term": "Replique",
+          "surfaces": [
+            "page",
+            "email"
+          ]
+        }
+      ]
+    }
+  }
+}

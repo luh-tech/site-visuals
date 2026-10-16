@@ -1,0 +1,176 @@
+{
+  "$schema": "https://schemas.luh.tech/portfolio/market-family.schema.json",
+  "version": "1.0.1",
+  "lightSurface": {
+    "oklch": "oklch(97% 0.007 107)",
+    "hex": "#F5F5F0"
+  },
+  "steps": {
+    "siblingOffsets": [
+      0,
+      -0.08,
+      0.08,
+      -0.16,
+      0.16
+    ],
+    "precisionStep": 0.06
+  },
+  "families": [
+    {
+      "id": "data-centre",
+      "label": "Data centre",
+      "order": 1,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        },
+        "line": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        }
+      }
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial",
+      "order": 2,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(40% 0.170 340)",
+          "hex": "#7D0563"
+        },
+        "line": {
+          "oklch": "oklch(40% 0.170 340)",
+          "hex": "#7D0563"
+        }
+      }
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "order": 3,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(69% 0.114 183)",
+          "hex": "#2BB3A3"
+        },
+        "line": {
+          "oklch": "oklch(63% 0.109 183)",
+          "hex": "#169F90"
+        }
+      }
+    },
+    {
+      "id": "residential",
+      "label": "Residential",
+      "order": 4,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(66% 0.176 286)",
+          "hex": "#8B7CF6"
+        },
+        "line": {
+          "oklch": "oklch(66% 0.176 286)",
+          "hex": "#8B7CF6"
+        }
+      }
+    },
+    {
+      "id": "agricultural",
+      "label": "Agricultural",
+      "order": 5,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(77% 0.167 125)",
+          "hex": "#9BC53D"
+        },
+        "line": {
+          "oklch": "oklch(63% 0.157 125)",
+          "hex": "#739804"
+        }
+      }
+    },
+    {
+      "id": "laboratory",
+      "label": "Laboratory",
+      "order": 6,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(76% 0.112 229)",
+          "hex": "#5BC0EB"
+        },
+        "line": {
+          "oklch": "oklch(63% 0.112 228)",
+          "hex": "#2A97C0"
+        }
+      }
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare",
+      "order": 7,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(68% 0.148 4)",
+          "hex": "#E06C8C"
+        },
+        "line": {
+          "oklch": "oklch(66% 0.147 4)",
+          "hex": "#D96686"
+        }
+      }
+    },
+    {
+      "id": "industrial-logistics",
+      "label": "Industrial and logistics",
+      "order": 8,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(55% 0.060 46)",
+          "hex": "#906754"
+        },
+        "line": {
+          "oklch": "oklch(55% 0.060 46)",
+          "hex": "#906754"
+        }
+      }
+    },
+    {
+      "id": "infrastructure-energy",
+      "label": "Infrastructure and energy",
+      "order": 9,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(75% 0.103 299)",
+          "hex": "#B8A1E8"
+        },
+        "line": {
+          "oklch": "oklch(65% 0.103 299)",
+          "hex": "#9982C7"
+        }
+      }
+    },
+    {
+      "id": "civic",
+      "label": "Civic",
+      "order": 10,
+      "hue": {
+        "fill": {
+          "oklch": "oklch(46% 0.055 246)",
+          "hex": "#3E5C76"
+        },
+        "line": {
+          "oklch": "oklch(46% 0.055 246)",
+          "hex": "#3E5C76"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "createdAt": "2026-10-16",
+    "lastUpdated": "2026-10-16",
+    "author": "Claude Opus 5.5 (bt-mbp, covering sr-mbp), per L4 direction (Erik Luhtala)",
+    "decisionRef": "d-2026-10-16-lb-figure-kit-architecture"
+  }
+}

@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/luh-tech/site-visuals.git"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public",
@@ -24,7 +27,7 @@
     "./lib/*": "./src/lib/*"
   },
   "scripts": {
-    "test": "node --experimental-strip-types --test test/*.test.mjs"
+    "test": "node --experimental-strip-types --test test/*.test.mjs && npm test -w @luhtech/figures"
   },
   "peerDependencies": {
     "astro": "^7.2",

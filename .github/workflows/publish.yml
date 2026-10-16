@@ -15,7 +15,7 @@
 name: publish
 on:
   push:
-    tags: ['site-visuals-v*']
+    tags: ['site-visuals-v*', 'figures-v*']
 permissions:
   contents: read
   id-token: write
@@ -29,4 +29,9 @@ jobs:
       - run: npm install -g npm@latest        # trusted publishing needs npm >= 11.5.1
       - run: npm ci
       - run: npm test
-      - run: npm publish --provenance --access public   # no NODE_AUTH_TOKEN: OIDC
+      # site-visuals-v* publishes the root package; figures-v* publishes @luhtech/figures (packages/figures),
+      # built by its own prepublish test run. Same OIDC trusted publishing for both.
+      - if: startsWith(github.ref_name, 'site-visuals-v')
+        run: npm publish --provenance --access public   # no NODE_AUTH_TOKEN: OIDC
+      - if: startsWith(github.ref_name, 'figures-v')
+        run: npm publish -w @luhtech/figures --provenance --access public

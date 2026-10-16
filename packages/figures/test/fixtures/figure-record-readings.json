@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.luh.tech/content/figure.schema.json",
+  "audience": "public",
+  "owningVenture": "luhtech",
+  "meta": {
+    "createdAt": "2026-10-16",
+    "lastUpdated": "2026-10-16",
+    "author": "figure kit fixture"
+  },
+  "figureId": "urn:luhtech:luhtech:figure:readings-close-12",
+  "title": "Revenue, margin and the binding constraint at close 12",
+  "alt": "Tiles: revenue, margin and binding constraint against plan",
+  "longDescription": "Revenue $4.02M, up $670k or 20% on plan. Margin after cost to serve 43%, up 11.4 points. The binding constraint is demand: capacity 144 units, demand 94.",
+  "diagram": {
+    "diagramId": "tiles",
+    "diagramType": "record-readings",
+    "register": "executive",
+    "source": {
+      "ref": "urn:luhtech:luhtech:close:illustrative",
+      "label": "Closes by cell, close 12"
+    },
+    "stamp": {
+      "asOf": "2026-10-16",
+      "scenario": "Draft",
+      "publishedAt": "2026-10-16",
+      "basis": "modelled"
+    },
+    "illustrative": true,
+    "data": {
+      "readings": [
+        {
+          "label": "Revenue \u00b7 close 12",
+          "value": 4020000,
+          "plan": 3350000,
+          "unit": "currency"
+        },
+        {
+          "label": "Margin after cost to serve",
+          "value": 0.43,
+          "plan": 0.316,
+          "unit": "percent"
+        },
+        {
+          "label": "Binding constraint",
+          "value": 0,
+          "text": "Demand",
+          "detail": "capacity 144 \u00b7 demand 94 units"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "@luhtech/figures",
+  "version": "0.1.0",
+  "description": "The holdings' figure kit: one grammar core that draws a figure record the same on every surface -- deterministic SVG from a schema-registry figure record, its data and the host brand's theme, with React and Astro adapters.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "LuhTech Holdings",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luh-tech/site-visuals.git",
+    "directory": "packages/figures"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "dist",
+    "src/astro",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    },
+    "./astro": "./src/astro/Figure.astro"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "gen:types": "node scripts/gen-types.mjs"
+  },
+  "dependencies": {
+    "d3-scale": "4.0.2",
+    "d3-shape": "3.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "astro": ">=7.2"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "astro": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "react": "19.3.0",
+    "@types/d3-scale": "4.0.9",
+    "@types/d3-shape": "3.2.0",
+    "json-schema-to-typescript": "16.0.0",
+    "react-dom": "19.3.0"
+  },
+  "luhtech": {
+    "schemaRegistryTag": "v29"
+  }
+}

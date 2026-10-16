@@ -1,0 +1,177 @@
+{
+  "$schema": "https://schemas.luh.tech/portfolio/brand-identity.schema.json",
+  "brandId": "jscone",
+  "entityType": "subBrand",
+  "parentBrandId": "jobsitecontrol",
+  "identity": {
+    "name": "JsCone",
+    "oneLiner": "JobsiteControl's ruggedized connectivity and edge-compute unit, keeping a site online without commercial fiber or reliable cell coverage."
+  },
+  "color": {
+    "foundation": {
+      "ink": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "canvas": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      }
+    },
+    "accent": {
+      "primary": {
+        "oklch": "oklch(65% 0.194 41)",
+        "hex": "#EA580C"
+      }
+    },
+    "onDark": {
+      "foreground": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "background": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "contrastRatio": 17.77
+    },
+    "onLight": {
+      "foreground": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "background": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "contrastRatio": 17.77
+    },
+    "chart": {
+      "surfaces": {
+        "light": {
+          "surface": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          },
+          "ink": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          }
+        },
+        "dark": {
+          "surface": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          },
+          "ink": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          }
+        }
+      },
+      "planGhost": {
+        "fill": {
+          "oklch": "oklch(80% 0.016 266)",
+          "hex": "#B9BEC9"
+        },
+        "line": {
+          "oklch": "oklch(64% 0.017 270)",
+          "hex": "#888C97"
+        }
+      },
+      "accent": {
+        "fill": {
+          "oklch": "oklch(65% 0.194 41)",
+          "hex": "#EA580C"
+        },
+        "line": {
+          "oklch": "oklch(65% 0.194 41)",
+          "hex": "#EA580C"
+        }
+      },
+      "changeUp": {
+        "fill": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        },
+        "line": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        }
+      },
+      "changeDown": {
+        "fill": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        },
+        "line": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        }
+      },
+      "axis": {
+        "oklch": "oklch(55% 0.026 269)",
+        "hex": "#6A7080"
+      },
+      "grid": {
+        "oklch": "oklch(88% 0.011 107)",
+        "hex": "#D8D8D0"
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Sora",
+      "weightRange": [
+        "SemiBold",
+        "Bold"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "body": {
+      "family": "Inter",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "figure": {
+      "title": "display",
+      "label": "body",
+      "stamp": "mono"
+    }
+  },
+  "logo": {
+    "requiredVariants": {
+      "wordmark": "jscone-wordmark",
+      "faviconReduction": "jscone-mark"
+    },
+    "rules": {
+      "clearSpace": "1x mark-height on all sides",
+      "minSize": "24px digital",
+      "prohibitedUses": [
+        "renders in JobsiteControl's secondary orange, never the parent's primary -- JsCone is endorsed hardware, not a peer brand"
+      ]
+    }
+  },
+  "iconSet": {
+    "iconSetId": "gtm-surface-line-icons-v1"
+  },
+  "meta": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "createdBy": "claude-code-gtm-content-cleanup",
+    "updatedAt": "2026-09-07T00:00:00Z",
+    "updatedBy": "claude-code-gtm-content-cleanup",
+    "version": 1,
+    "instanceKind": "real"
+  }
+}

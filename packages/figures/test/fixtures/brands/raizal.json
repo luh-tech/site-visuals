@@ -1,0 +1,236 @@
+{
+  "$schema": "https://schemas.luh.tech/portfolio/brand-identity.schema.json",
+  "brandId": "raizal",
+  "entityType": "venture",
+  "identity": {
+    "name": "Raizal",
+    "oneLiner": "A cooperative carbon marketplace with credits traced to the field.",
+    "tagline": "Carbon credits grown by farmers, owned by farmers."
+  },
+  "color": {
+    "foundation": {
+      "ink": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "canvas": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      }
+    },
+    "accent": {
+      "primary": {
+        "oklch": "oklch(65% 0.175 132)",
+        "hex": "#65A30D"
+      },
+      "secondary": {
+        "oklch": "oklch(53% 0.141 132)",
+        "hex": "#4D7C0F"
+      }
+    },
+    "onDark": {
+      "foreground": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "background": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "contrastRatio": 17.77
+    },
+    "onLight": {
+      "foreground": {
+        "oklch": "oklch(16% 0.000 0)",
+        "hex": "#0D0D0D"
+      },
+      "background": {
+        "oklch": "oklch(97% 0.007 107)",
+        "hex": "#F5F5F0"
+      },
+      "contrastRatio": 17.77
+    },
+    "hueStop": 85,
+    "chart": {
+      "surfaces": {
+        "light": {
+          "surface": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          },
+          "ink": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          }
+        },
+        "dark": {
+          "surface": {
+            "oklch": "oklch(16% 0.000 0)",
+            "hex": "#0D0D0D"
+          },
+          "ink": {
+            "oklch": "oklch(97% 0.007 107)",
+            "hex": "#F5F5F0"
+          }
+        }
+      },
+      "planGhost": {
+        "fill": {
+          "oklch": "oklch(80% 0.016 266)",
+          "hex": "#B9BEC9"
+        },
+        "line": {
+          "oklch": "oklch(64% 0.017 270)",
+          "hex": "#888C97"
+        }
+      },
+      "accent": {
+        "fill": {
+          "oklch": "oklch(53% 0.141 132)",
+          "hex": "#4D7C0F"
+        },
+        "line": {
+          "oklch": "oklch(53% 0.141 132)",
+          "hex": "#4D7C0F"
+        }
+      },
+      "changeUp": {
+        "fill": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        },
+        "line": {
+          "oklch": "oklch(61% 0.186 260)",
+          "hex": "#3B7FF2"
+        }
+      },
+      "changeDown": {
+        "fill": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        },
+        "line": {
+          "oklch": "oklch(60% 0.182 25)",
+          "hex": "#D64545"
+        }
+      },
+      "axis": {
+        "oklch": "oklch(55% 0.026 269)",
+        "hex": "#6A7080"
+      },
+      "grid": {
+        "oklch": "oklch(88% 0.011 107)",
+        "hex": "#D8D8D0"
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Sora",
+      "weightRange": [
+        "SemiBold",
+        "Bold"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "body": {
+      "family": "Inter",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weightRange": [
+        "Regular",
+        "Medium"
+      ],
+      "license": "Google Fonts (OFL)"
+    },
+    "figure": {
+      "title": "display",
+      "label": "body",
+      "stamp": "mono"
+    }
+  },
+  "logo": {
+    "requiredVariants": {
+      "wordmark": "raizal-wordmark",
+      "faviconReduction": "raizal-mark",
+      "animatedMark": "raizal-mark-animated"
+    },
+    "rules": {
+      "clearSpace": "1x mark-height on all sides",
+      "minSize": "24px digital",
+      "prohibitedUses": [
+        "the I's Kernza glyph is never redrawn as a generic wheat stalk -- Kernza is the specific, deliberate reference (perennial grain, the venture's own beachhead crop), not decorative wheat"
+      ]
+    }
+  },
+  "iconSet": {
+    "iconSetId": "gtm-surface-line-icons-v1"
+  },
+  "voice": {
+    "register": "Direct, grounded in the actual mechanism -- a marketplace connecting two real parties (buyers, farmers), not a vague sustainability pitch. A claim about market size or crop science names its source.",
+    "lexicon": {
+      "preferred": [
+        "cooperative",
+        "perennial",
+        "marginal land",
+        "regenerative",
+        "verified",
+        "farmer-owned",
+        "carbon credit"
+      ],
+      "prohibited": [
+        "blockchain",
+        "DAO",
+        "smart contract",
+        "greenwashing",
+        "offset guilt",
+        "carbon neutral",
+        "fork",
+        "forks Ectropy",
+        "code carries over",
+        "authority cascade",
+        "7-tier",
+        "tier authority",
+        "Fragments",
+        "Seppä",
+        "Seppa",
+        "SNx",
+        "PaySx",
+        "Service Exchange",
+        "decision archive",
+        "sibling venture",
+        "underneath every LuhTech Holdings venture",
+        "Investor Pitch",
+        "pitch deck",
+        "governance token",
+        "designed to",
+        "intended to",
+        "is planned to",
+        "mirror image of",
+        "LuhTech",
+        "Ectropy",
+        "JobsiteControl",
+        "Qullqa",
+        "Viiva",
+        "Siltana",
+        "Ohjaus",
+        "Hilja",
+        "Replique"
+      ]
+    }
+  },
+  "meta": {
+    "createdAt": "2026-09-05T00:00:00Z",
+    "createdBy": "claude-code-raizal-thin-site",
+    "updatedAt": "2026-09-08T00:00:00Z",
+    "updatedBy": "claude-code-gtm-l2-brand-instance",
+    "version": 2,
+    "instanceKind": "real"
+  }
+}

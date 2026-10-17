@@ -119,8 +119,9 @@ export function frame(p: FrameParts, t: Theme): string {
   parts.push(stamp.svg);
   y += stamp.height + PAD;
   const h = Math.ceil(y);
+  // Drawn at its width, scaled down to fit a narrower column (a phone) -- never wider than its container.
   return (
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${p.width} ${h}" width="${p.width}" height="${h}" role="img" ` +
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${p.width} ${h}" width="${p.width}" height="${h}" style="display:block;max-width:100%;height:auto" role="img" ` +
     `aria-labelledby="${p.id}-t ${p.id}-d" data-figure="${esc(p.id)}">` +
     `<title id="${p.id}-t">${esc(p.alt)}</title><desc id="${p.id}-d">${esc(p.longDescription)}</desc>` +
     `<rect width="${p.width}" height="${h}" fill="${t.surface}"/>` +

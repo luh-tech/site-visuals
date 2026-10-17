@@ -135,3 +135,8 @@ test("rings that are not a plan are not ghosted; a cost past revenue leaves no r
   assert.ok(!svg.includes(`fill="${lb.planGhost.fill}"`));
   assert.match(svg, />-20%</);
 });
+
+test("a figure scales down to fit its container and never widens the page", () => {
+  const svg = render(figures["ring-comparison"], undefined, lb);
+  assert.match(svg, /^<svg [^>]*style="display:block;max-width:100%;height:auto"/);
+});

@@ -1,6 +1,6 @@
 {
   "name": "@luhtech/figures",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The holdings' figure kit: one grammar core that draws a figure record the same on every surface -- deterministic SVG from a schema-registry figure record, its data and the host brand's theme, with React and Astro adapters.",
   "type": "module",
   "license": "Apache-2.0",
